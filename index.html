@@ -3,43 +3,52 @@
 <meta property="og:title" content="물어라, 읽혀라, 버텨라"><meta property="og:description" content="AI 시대의 복음과 교육 · 김은준">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
-:root{--ink:#1D1D1F;--mute:#6E6E73;--blue:#0066CC;--bg:#FBFBFD;--card:#fff;--line:#E5E5EA}
-@media(prefers-color-scheme:dark){:root{--ink:#F2F2F7;--mute:#A1A1A6;--blue:#4DA3FF;--bg:#111;--card:#1C1C1E;--line:#333}}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;font-size:17px;line-height:1.8;word-break:keep-all;overflow-wrap:break-word}
-.wrap{max-width:680px;margin:0 auto;padding:28px 20px 80px}
-.kicker{font-size:13px;color:var(--mute);letter-spacing:.02em}
-h1{font-size:34px;line-height:1.25;margin:10px 0 4px;font-weight:800}
-.sub{font-size:19px;color:var(--mute);margin:0 0 18px;font-weight:500}
-.meta{font-size:14px;color:var(--mute);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin:18px 0 22px}
-.btns{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 30px}
-.btn{display:inline-block;padding:11px 16px;border-radius:12px;background:var(--blue);color:#fff;text-decoration:none;font-weight:600;font-size:15px}
-.btn.ghost{background:transparent;color:var(--blue);border:1.5px solid var(--blue)}
-h2{font-size:22px;line-height:1.35;margin:44px 0 12px;font-weight:700;color:var(--ink);padding-top:14px;border-top:2px solid var(--blue)}
-h2:first-of-type{border:0;padding:0}
-p{margin:0 0 16px}strong{color:var(--blue);font-weight:700}
-blockquote{margin:0 0 18px;padding:12px 16px;background:var(--card);border-left:4px solid var(--blue);border-radius:6px;color:var(--mute);font-size:15px}
-blockquote p{margin:0}
-hr{border:0;border-top:1px solid var(--line);margin:36px 0}
+:root{--ink:#1d1d1f;--mute:#6e6e73;--blue:#0071e3;--link:#0066cc;--bg:#fff;--gray:#f5f5f7;--line:rgba(0,0,0,.08);--nav:rgba(251,251,253,.8)}
+@media(prefers-color-scheme:dark){:root{--ink:#f5f5f7;--mute:#a1a1a6;--blue:#2997ff;--link:#2997ff;--bg:#000;--gray:#1d1d1f;--line:rgba(255,255,255,.12);--nav:rgba(29,29,31,.72)}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,-apple-system,BlinkMacSystemFont,"SF Pro KR","SF Pro Text","Apple SD Gothic Neo","Noto Sans KR",sans-serif;font-size:17px;line-height:1.7;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+.nav{position:sticky;top:0;z-index:10;backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);background:var(--nav);border-bottom:1px solid var(--line)}
+.nav .in{max-width:980px;margin:0 auto;padding:0 20px;height:48px;display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:-.01em}
+.nav .brand{font-weight:600;color:var(--ink);font-size:14px}.nav .links a{color:var(--ink);opacity:.8;margin-left:18px}.nav .links a:hover{opacity:1;text-decoration:none}
+.hero{text-align:center;padding:64px 20px 40px;max-width:720px;margin:0 auto}
+.eyebrow{font-size:14px;font-weight:600;color:var(--mute);letter-spacing:-.01em;margin-bottom:10px}
+h1{font-size:44px;line-height:1.1;letter-spacing:-.025em;font-weight:700;margin:0 0 10px}
+.sub{font-size:22px;line-height:1.3;letter-spacing:-.015em;color:var(--mute);font-weight:500;margin:0 0 22px}
+.meta{font-size:14px;color:var(--mute);line-height:1.6;margin:0 auto 26px;max-width:560px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:0 0 8px}
+.btn{display:inline-block;padding:10px 20px;border-radius:980px;background:var(--blue);color:#fff;font-weight:500;font-size:15px;line-height:1.2}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--link);border:1px solid var(--link)}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:28px 0 30px}
+.three div{background:var(--gray);border-radius:18px;padding:18px 8px}
+.three b{display:block;font-size:22px;letter-spacing:-.02em;color:var(--ink)}.three span{font-size:12px;color:var(--mute)}
+.wrap{max-width:680px;margin:0 auto;padding:20px 20px 80px}
+h2{font-size:26px;line-height:1.2;letter-spacing:-.02em;font-weight:700;margin:56px 0 14px}
+h3{font-size:20px;letter-spacing:-.015em;margin:36px 0 10px}h4,h5{font-size:17px;margin:28px 0 8px}
+p{margin:0 0 18px}strong{font-weight:700;color:var(--ink)}
+blockquote{margin:0 0 20px;padding:18px 20px;background:var(--gray);border-radius:18px;color:var(--ink);font-size:16px}blockquote p{margin:0}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 ul{padding-left:1.2em}li{margin-bottom:8px}
-a{color:var(--blue)}
-.footnotes{font-size:14px;color:var(--mute)}.footnotes ol{padding-left:1.4em}.footnotes li{margin-bottom:10px}.footnotes hr{display:none}
-sup{font-size:.7em}
-.foot{margin-top:50px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:var(--mute)}
-.three{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0 30px}
-.three div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 8px;text-align:center}
-.three b{display:block;font-size:20px;color:var(--blue)}.three span{font-size:12px;color:var(--mute)}
+sup{font-size:.68em}
+.footnotes{font-size:14px;color:var(--mute);line-height:1.6}.footnotes ol{padding-left:1.4em}.footnotes li{margin-bottom:10px}.footnotes hr{display:none}
 .rp{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
-.rp > div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
-.rp .yr{font-size:12px;color:var(--mute)}.rp .nm{font-size:19px;font-weight:800;margin:2px 0 0}.rp .en{font-size:11px;color:var(--mute);margin-bottom:8px}
-.rp .vb{font-size:17px;font-weight:700;color:var(--blue);margin-bottom:6px}.rp p{font-size:14px;margin:0 0 8px;line-height:1.6}
-.rp .out{font-size:12px;color:var(--mute)}
-.flow{font-size:14px;color:var(--mute);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:0 0 16px}
-</style></head><body><div class="wrap">
-<div class="kicker">강연 원고 · 미래목회 심포지움 2026 「교회, AX를 시작하다」</div><h1>물어라, 읽혀라, 버텨라</h1><p class="sub">AI 시대의 복음과 교육</p>
+.rp > div{background:var(--gray);border-radius:18px;padding:18px}
+.rp .yr{font-size:12px;color:var(--mute)}.rp .nm{font-size:20px;font-weight:700;letter-spacing:-.02em;margin:2px 0 0}.rp .en{font-size:11px;color:var(--mute);margin-bottom:8px}
+.rp .vb{font-size:17px;font-weight:600;color:var(--link);margin-bottom:6px}.rp p{font-size:14px;margin:0 0 8px;line-height:1.55}.rp .out{font-size:12px;color:var(--mute)}
+.flow{font-size:14px;color:var(--mute);background:var(--gray);border-radius:18px;padding:14px 18px;margin:0 0 16px}
+.foot{max-width:980px;margin:40px auto 0;padding:24px 20px 48px;border-top:1px solid var(--line);font-size:12px;color:var(--mute);line-height:1.6}
+@media(max-width:480px){h1{font-size:34px}.sub{font-size:19px}.hero{padding:44px 20px 28px}.three b{font-size:19px}}
+
+.nav .in{white-space:nowrap;gap:12px}.nav .brand{flex:none}.nav .links{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}.nav .links::-webkit-scrollbar{display:none}
+@media(max-width:600px){.nav .brand span{display:none}.nav .links a{margin-left:14px;font-size:12px}}
+.soon{display:inline-block;font-size:11px;font-weight:600;color:var(--mute);background:var(--gray);border-radius:980px;padding:2px 9px;margin-left:6px;vertical-align:2px}</style></head><body><div class="nav"><div class="in"><a class="brand" href="index.html">김은준<span> · AX 심포지움 2026</span></a><div class="links"><a href="#top">강연 원고</a><a href="#reading">독서 프로그램</a></div></div></div>
+<header class="hero" id="top"><div class="eyebrow">강연 원고 · 미래목회 심포지움 2026 「교회, AX를 시작하다」</div><h1>물어라, 읽혀라, 버텨라</h1><p class="sub">AI 시대의 복음과 교육</p>
 <div class="meta">2026년 9월 7일 · 양재 온누리교회 · 두란노바이블칼리지<br>강연 뒤 다듬은 판(v3.2, 2026-09-13) — 실제 강연과 표현이 조금 다를 수 있습니다.</div>
+<div class="btns"><a class="btn" href="물어라읽혀라버텨라_김은준.pdf" download>PDF로 내려받기</a><a class="btn ghost" href="#reading">독서 프로그램</a></div>
 <div class="three"><div><b>물어라</b><span>이 아이는 누구인가</span></div><div><b>읽혀라</b><span>무엇을 보게 할 것인가</span></div><div><b>버텨라</b><span>어떻게 견딜 것인가</span></div></div>
-<div class="btns"><a class="btn" href="물어라읽혀라버텨라_김은준.pdf" download>PDF로 내려받기</a><a class="btn ghost" href="article-academic.html">학술판 읽기</a><a class="btn ghost" href="article-church.html">교회·학부모용 읽기</a><a class="btn ghost" href="#reading">독서 프로그램</a></div>
+</header>
+<main class="wrap">
 
 <h2 id="들어가며-아이-곁에-있는-어른">들어가며 — 아이 곁에 있는 어른</h2>
 <p>안녕하십니까, 김은준입니다. 저는 세 가지 일을 하며 삽니다. 학교에서는 아이들을 가르치는 교장이고, 교회에서는 말씀을 전하는 목사이고, 그리고 지난 몇 달은 — 이게 좀 이상하게 들리실 텐데 — AI와 씨름하며 앱을 만드는 개발자로 살았습니다. 오늘 이 세 자리에서 본 것을 하나로 모아서 말씀드리려고 합니다.</p>
@@ -162,8 +171,8 @@ sup{font-size:.7em}
 <p><a class="btn ghost" href="2mm_독서프로그램_소개서.pdf" download>소개서 PDF 내려받기</a></p>
 <h2 id="더-읽기">더 읽기</h2>
 <ul>
-<li><a href="article-academic.html">학술판 — 「대답은 사람을 만들지 못한다」</a> (논문 형식, 각주 36)</li>
-<li><a href="article-church.html">교회·학부모용 — 「AI 시대의 교육환경과 〈학생을 혼자 두지 않는다〉의 교육개념」</a></li>
+<li>학술판 — 「대답은 사람을 만들지 못한다 — AI 시대의 복음과 교육: 곁에 있는 어른의 세 가지 동사」 <span class="soon">공개 예정</span></li>
+<li>교회·학부모용 — 「AI 시대의 교육환경과 〈학생을 혼자 두지 않는다〉의 교육개념 — 금지와 방임 사이, 곁의 신학이 여는 셋째 길」 <span class="soon">공개 예정</span></li>
 <li>책: 김은준, 『학생을 혼자 두지 않는다』</li>
 </ul>
 <h2 id="주">주</h2>
@@ -189,5 +198,5 @@ sup{font-size:.7em}
 </ol>
 </aside>
 
-<div class="foot">© 2026 김은준 · 이오에스 미래 리더스 대표 · 『학생을 혼자 두지 않는다』 저자<br>출처를 밝히고 자유롭게 나누셔도 됩니다. 본문을 고쳐서 옮기는 것은 삼가 주십시오.</div>
-</div></body></html>
+</main>
+<div class="foot">© 2026 김은준 · 이오에스 미래 리더스 대표 · 『학생을 혼자 두지 않는다』 저자<br>출처를 밝히고 자유롭게 나누셔도 됩니다. 본문을 고쳐서 옮기는 것은 삼가 주십시오.</div></body></html>
